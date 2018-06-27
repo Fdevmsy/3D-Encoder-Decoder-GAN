@@ -49,7 +49,7 @@ def discriminator(phase_train = True, params={'cube_size':32, 'strides':(2,2,2),
 
 
 def decoder(phase_train=True, params={'z_length':200, 'strides':(2,2,2), 'kernel_size':(5,5,5)}):
-
+## Decoder, input z vector, output cube. 
     z_length = params['z_length']
     strides = params['strides']
     kernel_size = params['kernel_size'] 
@@ -87,7 +87,7 @@ def decoder(phase_train=True, params={'z_length':200, 'strides':(2,2,2), 'kernel
 
 
 def encoder(phase_train = True, params={'cube_size':32, 'strides':(2,2,2), 'kernel_size':(5,5,5), 'leak':0.2}):
-
+## Encoder, input 3d cube, output z vector.
     cube_size = params['cube_size']
     strides = params['strides']
     kernel_size = params['kernel_size'] 
